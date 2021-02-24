@@ -14,6 +14,7 @@ namespace Series
         public Serie(int id, Genero genero, string titulo, string descricao, int ano)
         {
             this.Id = id;
+            this.Titulo = titulo;
             this.Genero = genero;
             this.Descricao = descricao;
             this.Ano = ano;
@@ -26,7 +27,8 @@ namespace Series
             retorno += "Gênero: " + this.Genero + Environment.NewLine;
             retorno += "Titulo: " + this.Titulo + Environment.NewLine;
             retorno += "Descrição: " + this.Descricao + Environment.NewLine;
-            retorno += "Ano de Inicio: " + this.Ano;
+            retorno += "Ano de Inicio: " + this.Ano + Environment.NewLine;
+            retorno += "Excluido: " + this.Excluido;
 
             return retorno;
         }
@@ -44,6 +46,11 @@ namespace Series
         public void Excluir() 
         {
             this.Excluido = true;
+        }
+
+        public bool SerieExcluida()
+        {
+            return this.Excluido;
         }
     }
 }

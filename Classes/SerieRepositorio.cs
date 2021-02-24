@@ -5,7 +5,7 @@ namespace Series
 {
     public class SerieRepositorio : IRepositorio<Serie>
     {
-        private List<Serie> listaSerie = new List<Serie>;
+        private List<Serie> listaSerie = new List<Serie>();
         public void Atualiza(int id, Serie serie)
         {
             listaSerie[id] = serie;
